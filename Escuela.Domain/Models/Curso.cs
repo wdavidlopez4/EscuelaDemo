@@ -9,15 +9,18 @@ namespace Escuela.Domain.Models
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
 
+        public Salon Salon { get; set; }
+
         public Curso():base()
         {
 
         }
 
-        public Curso(string nombre, string descripcion, string id):base(id)
+        public Curso(string id, string nombre, string descripcion, Salon salon):base(id)
         {
             this.Nombre = nombre;
             this.Descripcion = descripcion;
+            this.Salon = salon;
         }
     }
 }

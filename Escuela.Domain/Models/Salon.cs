@@ -9,16 +9,20 @@ namespace Escuela.Domain.Models
     {
         public string Localizacion { get; set; }
         public string Descripcion { get; set; }
+        public List<Curso> Cursos { get; set; }
+
 
         public Salon(): base()
         {
 
         }
 
-        public Salon(string localizacion, string descripcion, string id): base(id)
+        public Salon(string id, string localizacion, string descripcion, List<Curso> cursos)
+            : base(id)
         {
             this.Localizacion = localizacion;
             this.Descripcion = descripcion;
+            this.Cursos = cursos;
         }
     }
 }

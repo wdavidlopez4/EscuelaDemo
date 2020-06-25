@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Escuela.Domain.Interfaces
 {
-    public interface IDomain<T> where T : EscuelaBase
+    public interface IDomain<T>
     {
         public Task<T> GetObjet();
 
         public Task<IEnumerable<T>> GetAllObjet();
 
-        public Task<bool> AddObjet();
+        public Task<bool> AddObjet(T obj);
 
-        public Task<bool> Update();
+        public Task<bool> Update(T obj);
     }
 }
